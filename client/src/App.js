@@ -7,12 +7,14 @@ import Register from "./components/auth/Register";
 //Redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Alert from "./components/layout/Alert";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <NavBar />
+        <Alert />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
