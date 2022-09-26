@@ -14,6 +14,7 @@ import "./App.css";
 import Dashboard from "./components/dashboard/Dashboard";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import CreateProfile from "./components/profile-form/CreateProfile";
+import EditProfile from "./components/profile-form/EditProfile";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -40,6 +41,10 @@ const App = () => {
           <Route
             path="/create-profile"
             element={<PrivateRoute component={CreateProfile} />}
+          />
+          <Route
+            path="/edit-profile"
+            element={<PrivateRoute component={EditProfile} />}
           />
         </Routes>
       </Router>
