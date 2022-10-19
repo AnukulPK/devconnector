@@ -8,7 +8,7 @@ import { getProfiles } from "../../redux/actions/profile";
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
 
   return (
     <>
